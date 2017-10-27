@@ -27,15 +27,21 @@ public:
     
     //getters
     int getAlbumID();
+    int getSongID();
     class Recording *getRecordingPointer();
+    class Song *getSongPointer();
     
     //setter
     void setRecordingPtr(class Recording *recordingPtr);
     
+    void setSongPtr(class Song *songPtr);
+    
 private:
     int track_id, albumID, songID, track_number;
     
-     class Recording *ptr_rec;
+    class Song *ptr_song;
+    class Recording *ptr_rec;
+    
 };
 
 #endif /* Track_hpp */

@@ -36,8 +36,13 @@ private:
     Songs songs; //instantiating Songs object
     Recordings recordings;
     Recordings * recording_ptr;
+    
+    Tracks * tracks_ptr;
+    Songs * song_ptr;
     Track track;
     Tracks tracks;
+    
+    int count=0;
    
 };
 

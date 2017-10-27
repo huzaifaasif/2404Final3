@@ -29,13 +29,26 @@ int Track::getAlbumID(){
     return albumID;
 }
 
-Recording *Track::getRecordingPointer(){
-    return ptr_rec;
+int Track::getSongID(){
+    return songID;
 }
 
-void Track::setRecordingPtr(Recording *recordingPtr){
-    ptr_rec = recordingPtr;
+void Track::setSongPtr(Song *songPtr){
+    ptr_song = songPtr;
 }
+
+Song *Track::getSongPointer(){
+    return ptr_song;
+}
+
+//
+//Recording *Track::getRecordingPointer(){
+//    return ptr_rec;
+//}
+//
+//void Track::setRecordingPtr(Recording *recordingPtr){
+//    ptr_rec = recordingPtr;
+//}
 
 
 string Track::toString() const{

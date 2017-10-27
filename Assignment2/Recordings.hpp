@@ -22,6 +22,8 @@ public:
     void getData(string &input, class Tracks &tracks);
     void populatingTrack(Tracks &tracks, Recording &recording);
     
+    void recordingsToRespectiveTrack(Tracks *track_ptr);
+    
     //getters
     int getRecordingCollection(int index);
     int getRecordingAlbumID(int i);

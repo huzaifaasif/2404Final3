@@ -26,9 +26,19 @@ public:
     int getAlbumID();
     
     
+    //getter
+    class Track *getTrackPointer();
+    
+    
+    //setter
+    void setTrackPtr(class Track *Track);
+    Track *createNewPtr();
+    
 private:
     string title, artist, producer;
     int year, albumID;
+    class Track *ptr_track;
+    
     //Track *ptr;
 };
 

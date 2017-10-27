@@ -64,17 +64,24 @@ void genericClass::performOperation(string &input){
     if (keyword=="s"){  //if it's "s", then create song object+append to the vector
         
         songs.getData(input);
+        song_ptr = &songs;
 
     }
     else if (keyword == "r"){
         recordings.getData(input, tracks);
-        recording_ptr = &recordings;
+        //recording_ptr = &recordings;
         
     }
     else if (keyword == "t"){
         tracks.getData(input);
-        tracks.tracksToRespectiveAlbum(recording_ptr);
+        //tracks.tracksToRespectiveAlbum(recording_ptr);
         
+        tracks_ptr = &tracks;
+        recordings.recordingsToRespectiveTrack(tracks_ptr);
+        
+        
+        songs.tracksToRespectiveSongs(tracks_ptr, count);
+        count++;
     }
     
 }

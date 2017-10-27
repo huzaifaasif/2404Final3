@@ -7,7 +7,7 @@
 //
 
 #include "Recording.hpp"
-
+#include "Track.hpp"
 Recording::Recording(int albumID, string title, string artist, string producer, int year){
     this->title=title;
     this->artist=artist;
@@ -19,6 +19,20 @@ Recording::Recording(int albumID, string title, string artist, string producer, 
 //getter
 int Recording::getAlbumID(){
     return albumID;
+}
+
+Track *Recording::createNewPtr(){
+    Track *ptr = nullptr;
+    return ptr;
+}
+
+void Recording::setTrackPtr(Track *track){
+    //ptr_track = track;
+    
+}
+
+Track *Recording::getTrackPointer(){
+    return ptr_track;
 }
 
 string Recording::toString() const{

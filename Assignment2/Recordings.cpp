@@ -94,6 +94,29 @@ void Recordings::getData(string &input, Tracks &tracks){
 //    tracks.setTrackCollection(recording);
 //}
 
+void Recordings::recordingsToRespectiveTrack(Tracks *tracks){
+    
+    for (int i=0; i<recordings_collection.size(); i++){
+        for (int j=0; j<tracks->sizeOfTrackCollection(); j++){
+            
+            if ( recordings_collection[i]->getAlbumID() == tracks->getAlbumID(j) ){
+                
+               getRecordingInstance(i)->setTrackPtr(tracks->getTrackInstance(j));
+                
+                //getRecordingInstance(i)->createNewPtr();
+               
+                
+                
+            }
+        }
+    }
+    
+    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
+        cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer()<<endl;
+    }
+    
+}
+
 int Recordings::getRecordingAlbumID(int index){
     return recordings_collection[index]->getAlbumID();
 }

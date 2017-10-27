@@ -127,6 +127,37 @@ Song * Songs::findByID(int anID){
  }*/
 
 
+void Songs::tracksToRespectiveSongs(Tracks *tracks, int count){
+    
+    for (int i=count; i<collection.size(); i++){
+        
+        if (collection[i]->getID() == tracks->getSongID(i)){
+            tracks->getTrackInstance(i)->setSongPtr(collection[i]);
+            break;
+        }
+        
+    }
+    
+    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
+        cout <<"Track->Song: "<<tracks->getTrackInstance(i)->getSongPointer()<<endl;
+    }
+    
+//    for (int i=0; i<collection.size(); i++){
+//        if (collection[i]->getID() == track->getSongID()){
+//            track->setSongPtr(collection[i]);
+//            
+//            
+//            break;
+//            
+//        }
+//        
+//        
+//    }
+    
+    //cout <<track->getSongPointer()<<endl;
+    
+}
+
 void Songs::printOn(ostream & o) const {
     cout <<"SONGS: "<<endl;
     for (int i=0; i<collection.size(); i++){

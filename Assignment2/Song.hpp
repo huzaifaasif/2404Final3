@@ -32,11 +32,14 @@ public:
     //getters
     string getTitle();
     string getComposer();
+    Song *getSongInstance();
     int getID();
     
 private:
     string title, composer;
     int id;
+    
+    
     
 };
 

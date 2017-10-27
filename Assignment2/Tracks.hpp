@@ -24,8 +24,15 @@ public:
     void getData(string &input);
 
     Track *getTrackInstance(int index);
+    size_t sizeOfTrackCollection();
     
-    void tracksToRespectiveAlbum(class Recordings *recordings);
+    //getters
+    int getAlbumID(int index);
+    int getSongID(int index);
+    
+    //setter
+    void setSongPtr(Song *songPtr);
+   // void tracksToRespectiveAlbum(class Recordings *recordings);
     
     void printOn(ostream &o) const;
     

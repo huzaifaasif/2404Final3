@@ -13,6 +13,8 @@
 #include <vector>
 #include "Song.hpp"
 #include "Songs.hpp"
+#include "Track.hpp"
+#include "Tracks.hpp"
 
 //storing collection of Song objects
 class Songs{
@@ -26,6 +28,9 @@ public:
     
     void getData(string &input);
     void printOn(ostream & out) const;
+    
+    void tracksToRespectiveSongs(Tracks *tracks, int count);
+ 
     
 private:
     

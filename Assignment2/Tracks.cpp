@@ -81,28 +81,43 @@ Track *Tracks::getTrackInstance(int index){
     return tracks_collection[index];  //dereference the pointer=track instance
 }
 
-void Tracks::tracksToRespectiveAlbum(Recordings *recordings){
-    
-    if (tracks_collection.size()>0){
-    
-        for (int i=0; i<tracks_collection.size(); i++){
-            for (int j=0; j<tracks_collection.size(); j++){
-                
-                if ( recordings->getRecordingAlbumID(i) == tracks_collection[j]->getAlbumID() ){
-                    
-                    
-                    getTrackInstance(j)->setRecordingPtr(recordings->getRecordingInstance(i));
-                    
-                    
-                    
-                    cout <<getTrackInstance(j)->getRecordingPointer()<<endl;
-                    
-                }
-            }
-        }
-    }
-    
+int Tracks::getAlbumID(int index){
+    return tracks_collection[index]->getAlbumID();
 }
+
+
+size_t Tracks::sizeOfTrackCollection(){
+    return tracks_collection.size();
+}
+
+int Tracks::getSongID(int index){
+    return tracks_collection[index]->getSongID();
+}
+
+
+
+//void Tracks::tracksToRespectiveAlbum(Recordings *recordings){
+//    
+//    if (tracks_collection.size()>0){
+//    
+//        for (int i=0; i<tracks_collection.size(); i++){
+//            for (int j=0; j<tracks_collection.size(); j++){
+//                
+//                if ( recordings->getRecordingAlbumID(i) == tracks_collection[j]->getAlbumID() ){
+//                    
+//                    
+//                    getTrackInstance(j)->setRecordingPtr(recordings->getRecordingInstance(i));
+//                    
+//                    
+//                    
+//                    cout <<getTrackInstance(j)->getRecordingPointer()<<endl;
+//                    
+//                }
+//            }
+//        }
+//    }
+//    
+//}
 
 void Tracks::printOn(ostream &o)const{
     cout<<"TRACKS: "<<endl;
