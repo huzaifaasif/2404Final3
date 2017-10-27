@@ -10,5 +10,9 @@ add -r 103 "Beatles For Sale" "Beatles" "George Martin" 1964
 
 add -t 1 100 1000 1
 add -t 2 100 1001 2
-add -t 3 101 1002 3
-add -t 4 101 1003 4
+add -t 3 100 1002 3
+add -t 4 100 1003 4
+add -t 15 101 1014 1
+add -t 16 101 1015 2
+add -t 17 101 1016 3
+add -t 18 101 1017 4

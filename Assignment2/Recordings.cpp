@@ -98,19 +98,21 @@ void Recordings::getData(string &input, Tracks &tracks){
 void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
     
     for (int i=0; i<recordings_collection.size(); i++){
-        for (int j=0; j<tracks->sizeOfTrackCollection(); j++){
+        for (int j=count; j<tracks->sizeOfTrackCollection(); j++){
             
             if ( recordings_collection[i]->getAlbumID() == tracks->getAlbumID(j) ){
                 
                getRecordingInstance(i)->addTrackPtr(tracks->getTrackInstance(j));
-               
+                
+               //cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer(j)<<endl;
             }
         }
     }
     
-    int j=0;
-    
-//    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
+//    int j=0;
+//    
+//    for (int i=0; i<recordings_collection.size(); i++){
+//        for (int j=count; j<tracks->sizeOfTrackCollection(); j++)
 //        while(j<tracks->sizeOfTrackCollection()){
 //            
 //            if (recordings_collection[i]->getAlbumID() != tracks->getAlbumID(j)){
@@ -118,7 +120,7 @@ void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
 //            }
 //            
 //            
-//            cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer(j)<<endl;
+//            
 //            j++;
 //        }
 //    }
