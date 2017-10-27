@@ -94,26 +94,39 @@ void Recordings::getData(string &input, Tracks &tracks){
 //    tracks.setTrackCollection(recording);
 //}
 
-void Recordings::recordingsToRespectiveTrack(Tracks *tracks){
+
+void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
     
     for (int i=0; i<recordings_collection.size(); i++){
         for (int j=0; j<tracks->sizeOfTrackCollection(); j++){
             
             if ( recordings_collection[i]->getAlbumID() == tracks->getAlbumID(j) ){
                 
-               getRecordingInstance(i)->setTrackPtr(tracks->getTrackInstance(j));
-                
-                //getRecordingInstance(i)->createNewPtr();
+               getRecordingInstance(i)->addTrackPtr(tracks->getTrackInstance(j));
                
-                
-                
             }
         }
     }
     
-    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
-        cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer()<<endl;
-    }
+    int j=0;
+    
+//    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
+//        while(j<tracks->sizeOfTrackCollection()){
+//            
+//            if (recordings_collection[i]->getAlbumID() != tracks->getAlbumID(j)){
+//                break;
+//            }
+//            
+//            
+//            cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer(j)<<endl;
+//            j++;
+//        }
+//    }
+//    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
+//        for (int j=i; j<tracks->sizeOfTrackCollection(); j++){
+//            cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer(j)<<endl;
+//        }
+//    }
     
 }
 

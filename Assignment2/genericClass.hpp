@@ -42,6 +42,7 @@ private:
     Track track;
     Tracks tracks;
     
+    int countForTracks=0;
     int count=0;
    
 };

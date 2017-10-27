@@ -73,19 +73,20 @@ void genericClass::performOperation(string &input){
         
     }
     else if (keyword == "t"){
-        tracks.getData(input);
-        //tracks.tracksToRespectiveAlbum(recording_ptr);
+        tracks.getData(input);  //parsing track info ie albumID etc...
+        
         
         tracks_ptr = &tracks;
-        recordings.recordingsToRespectiveTrack(tracks_ptr);
+        recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks); //points recording to respective tracks
+        countForTracks++;
         
         
-        songs.tracksToRespectiveSongs(tracks_ptr, count);
-        count++;
     }
     
 }
-
+//tracks.tracksToRespectiveAlbum(recording_ptr);
+//songs.tracksToRespectiveSongs(tracks_ptr, count);
+//count++;
 void genericClass::readFile(string fileName){
     
     string input;

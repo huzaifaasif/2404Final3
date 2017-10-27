@@ -8,6 +8,8 @@
 
 #include "Recording.hpp"
 #include "Track.hpp"
+#include <iostream>
+
 Recording::Recording(int albumID, string title, string artist, string producer, int year){
     this->title=title;
     this->artist=artist;
@@ -16,6 +18,15 @@ Recording::Recording(int albumID, string title, string artist, string producer, 
     this->albumID=albumID;
 }
 
+Recording::~Recording(){
+    
+    for (auto *ptr: trackPtrCollection){
+        delete ptr;
+    }
+    
+    trackPtrCollection.clear();
+
+}
 //getter
 int Recording::getAlbumID(){
     return albumID;
@@ -26,13 +37,15 @@ Track *Recording::createNewPtr(){
     return ptr;
 }
 
-void Recording::setTrackPtr(Track *track){
+void Recording::addTrackPtr(Track *track){
     //ptr_track = track;
     
+    trackPtrCollection.push_back(track);
+    cout << "Track pointer collection vector: "<<trackPtrCollection.size()<<endl;
 }
 
-Track *Recording::getTrackPointer(){
-    return ptr_track;
+Track *Recording::getTrackPointer(int index){
+    return trackPtrCollection[index];
 }
 
 string Recording::toString() const{

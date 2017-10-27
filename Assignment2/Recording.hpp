@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include "Track.hpp"
-
+#include <vector>
 ////add -r album_id title producer year
 
 using namespace std;
@@ -20,6 +20,7 @@ using namespace std;
 class Recording{
 public:
     Recording(int albumID, string title, string artist, string producer, int year);
+    ~Recording();
     
     string toString() const;
     
@@ -27,18 +28,20 @@ public:
     
     
     //getter
-    class Track *getTrackPointer();
+    class Track *getTrackPointer(int index);
     
     
     //setter
-    void setTrackPtr(class Track *Track);
+    void addTrackPtr(class Track *Track);
     Track *createNewPtr();
+    
     
 private:
     string title, artist, producer;
     int year, albumID;
     class Track *ptr_track;
     
+    vector<Track*> trackPtrCollection;
     //Track *ptr;
 };
 
