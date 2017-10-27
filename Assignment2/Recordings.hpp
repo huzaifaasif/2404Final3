@@ -13,6 +13,9 @@
 #include "Recording.hpp"
 #include "Tracks.hpp"
 #include <vector>
+#include <string>
+
+using namespace std;
 
 class Recordings{
 public:
@@ -20,12 +23,13 @@ public:
     ~Recordings();
     
     void getData(string &input, class Tracks &tracks);
-    void populatingTrack(Tracks &tracks, Recording &recording);
+    void populatingTrack(Tracks &tracks, class Recording &recording);
     
     void recordingsToRespectiveTrack(Tracks *track_ptr, int count);
     
     //getters
     int getRecordingCollection(int index);
+    size_t getRecordingCollectionSize();
     int getRecordingAlbumID(int i);
     Recording *getRecordingInstance(int i);
     
@@ -36,7 +40,7 @@ public:
     
 private:
     vector<Recording*> recordings_collection;
-    vector<Track*>trck;
+    //vector<class Track*>trck;
 };
 
 ostream & operator<<(ostream & out, const Recordings &recordings);

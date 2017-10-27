@@ -27,6 +27,16 @@ Recording::~Recording(){
     trackPtrCollection.clear();
 
 }
+
+void Recording::printTrackPtrCollection(Tracks *tracks){
+    
+    for (int i=0; i<trackPtrCollection.size(); i++){
+        
+        cout <<"Track address: "<<trackPtrCollection[i]<<endl;
+    }
+    cout <<endl;
+}
+
 //getter
 int Recording::getAlbumID(){
     return albumID;
@@ -46,6 +56,10 @@ void Recording::addTrackPtr(Track *track){
 
 Track *Recording::getTrackPointer(int index){
     return trackPtrCollection[index];
+}
+
+size_t Recording::getTrackPtrCollectionSize(){
+    return trackPtrCollection.size();
 }
 
 string Recording::toString() const{

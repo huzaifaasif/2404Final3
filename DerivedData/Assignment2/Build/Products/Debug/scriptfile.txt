@@ -2,6 +2,16 @@ add -s 1000 "I Saw Her Standing There" "Paul McCartney, John Lennon"
 add -s 1001 "Misery" "Paul McCartney, John Lennon"
 add -s 1002 "Anna (Go To Him)" "Arthur Alexander"
 add -s 1003 "Chains" "Gerry Goffin, Carole King"
+add -s 1004 "Boys" "Luther Dixon, Wes Farrell"
+add -s 1005 "Ask Me Why" "Paul McCartney, John Lennon"
+add -s 1006 "Please Please Me" "Paul McCartney, John Lennon"
+add -s 1007 "Love Me Do" "Paul McCartney, John Lennon"
+add -s 1008 "P.S. I Love You" "Paul McCartney, John Lennon"
+add -s 1009 "Baby It's You" "Hal David,Barney Williams, Burt Bacharach"
+add -s 1010 "Do You Want To Know A  Secret" "Paul McCartney, John Lennon"
+add -s 1011 "A Taste Of Honey" "Bobby Scott, Ric Marlow"
+add -s 1012 "There's A Place" "Paul McCartney, John Lennon"
+add -s 1013 "Twist and Shout" "Phil Medley, Bert Russell"
 
 add -r 100 "Please Please Me" "Beatles" "George Martin" 1963
 add -r 101 "With The Beatles" "Beatles" "George Martin" 1963
@@ -12,7 +22,13 @@ add -t 1 100 1000 1
 add -t 2 100 1001 2
 add -t 3 100 1002 3
 add -t 4 100 1003 4
-add -t 15 101 1014 1
-add -t 16 101 1015 2
-add -t 17 101 1016 3
-add -t 18 101 1017 4
+add -t 5 100 1004 5
+add -t 6 100 1005 6
+add -t 7 100 1006 7
+add -t 8 100 1007 8
+add -t 9 100 1008 9
+add -t 10 100 1009 10
+add -t 11 100 1010 11
+add -t 12 100 1011 12
+add -t 13 100 1012 13
+add -t 14 100 1013 14

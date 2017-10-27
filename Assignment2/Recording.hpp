@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include "Track.hpp"
+#include "Tracks.hpp"
 #include <vector>
 ////add -r album_id title producer year
 
@@ -26,9 +27,11 @@ public:
     
     int getAlbumID();
     
+    void printTrackPtrCollection(class Tracks *tracks);
     
     //getter
     class Track *getTrackPointer(int index);
+    size_t getTrackPtrCollectionSize();
     
     
     //setter

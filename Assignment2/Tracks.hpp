@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <vector>
 #include "Recordings.hpp"
+#include "Song.hpp"
 
 class Tracks{
 public:
@@ -23,7 +24,7 @@ public:
     void setTrackCollection(Recording *recording);
     void getData(string &input);
 
-    Track *getTrackInstance(int index);
+    class Track *getTrackInstance(int index);
     size_t sizeOfTrackCollection();
     
     //getters

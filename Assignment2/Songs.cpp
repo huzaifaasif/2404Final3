@@ -133,14 +133,18 @@ void Songs::tracksToRespectiveSongs(Tracks *tracks, int count){
         
         if (collection[i]->getID() == tracks->getSongID(i)){
             tracks->getTrackInstance(i)->setSongPtr(collection[i]);
+            
+            cout <<"Track->Song: "<<tracks->getTrackInstance(i)->getSongPointer()<<endl;
+            cout <<"Song ID: "<<collection[i]->getID()<<", "<<tracks->getSongID(i)<<endl;
+            
             break;
         }
-        
+        cout <<endl;
     }
     
-    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
-        cout <<"Track->Song: "<<tracks->getTrackInstance(i)->getSongPointer()<<endl;
-    }
+//    for (int i=0; i<tracks->sizeOfTrackCollection(); i++){
+//        
+//    }
     
 //    for (int i=0; i<collection.size(); i++){
 //        if (collection[i]->getID() == track->getSongID()){

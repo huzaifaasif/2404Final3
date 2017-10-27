@@ -94,6 +94,9 @@ void Recordings::getData(string &input, Tracks &tracks){
 //    tracks.setTrackCollection(recording);
 //}
 
+size_t Recordings::getRecordingCollectionSize(){
+    return recordings_collection.size();
+}
 
 void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
     
@@ -102,15 +105,28 @@ void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
             
             if ( recordings_collection[i]->getAlbumID() == tracks->getAlbumID(j) ){
                 
-               getRecordingInstance(i)->addTrackPtr(tracks->getTrackInstance(j));
+                getRecordingInstance(i)->addTrackPtr(tracks->getTrackInstance(j));
                 
-               //cout <<"Recording->Track: "<<getRecordingInstance(i)->getTrackPointer(j)<<endl;
             }
         }
+    
     }
     
+    for (int i=0; i<getRecordingCollectionSize(); i++){
+        
+        if (i<=getRecordingInstance(i)->getTrackPtrCollectionSize()){
+            cout <<"Album ID: "<<getRecordingInstance(i)->getAlbumID()<<endl;
+            getRecordingInstance(i)->printTrackPtrCollection(tracks);
+        }
+    }
+//    for (int i=0; i<recordings_collection.size(); i++){
+//        cout <<"ID: "<<tracks->getAlbumID(i)<<endl;
+//        getRecordingInstance(i)->printTrackPtrCollection(tracks);
+//    }
+    
+  
 //    int j=0;
-//    
+//
 //    for (int i=0; i<recordings_collection.size(); i++){
 //        for (int j=count; j<tracks->sizeOfTrackCollection(); j++)
 //        while(j<tracks->sizeOfTrackCollection()){
