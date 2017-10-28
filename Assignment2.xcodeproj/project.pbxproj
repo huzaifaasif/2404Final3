@@ -17,6 +17,8 @@
 		6C7B8FC41F9B85B900BDDF2D /* genericClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B8FC21F9B85B900BDDF2D /* genericClass.cpp */; };
 		6CBBFBCC1FA40A7500CC8F06 /* User.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CBBFBCA1FA40A7500CC8F06 /* User.cpp */; };
 		6CBBFBD01FA40B0800CC8F06 /* Users.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CBBFBCE1FA40B0800CC8F06 /* Users.cpp */; };
+		6CBBFBD51FA415DE00CC8F06 /* Playlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CBBFBD31FA415DD00CC8F06 /* Playlist.cpp */; };
+		6CBBFBD91FA4161900CC8F06 /* Playlists.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CBBFBD71FA4161900CC8F06 /* Playlists.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,10 @@
 		6CBBFBCB1FA40A7500CC8F06 /* User.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = User.hpp; sourceTree = "<group>"; };
 		6CBBFBCE1FA40B0800CC8F06 /* Users.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Users.cpp; sourceTree = "<group>"; };
 		6CBBFBCF1FA40B0800CC8F06 /* Users.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Users.hpp; sourceTree = "<group>"; };
+		6CBBFBD31FA415DD00CC8F06 /* Playlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Playlist.cpp; sourceTree = "<group>"; };
+		6CBBFBD41FA415DE00CC8F06 /* Playlist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Playlist.hpp; sourceTree = "<group>"; };
+		6CBBFBD71FA4161900CC8F06 /* Playlists.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Playlists.cpp; sourceTree = "<group>"; };
+		6CBBFBD81FA4161900CC8F06 /* Playlists.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Playlists.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				6C7763E11F9703F1001C42C1 /* main.cpp */,
+				6CBBFBDA1FA4162700CC8F06 /* Playlists */,
+				6CBBFBD61FA415F700CC8F06 /* Playlist */,
 				6CBBFBD21FA40B2100CC8F06 /* Users */,
 				6CBBFBCD1FA40A9600CC8F06 /* User */,
 				6C0842361FA02B9A00463947 /* Recordings */,
@@ -177,6 +185,24 @@
 				6CBBFBCF1FA40B0800CC8F06 /* Users.hpp */,
 			);
 			name = Users;
+			sourceTree = "<group>";
+		};
+		6CBBFBD61FA415F700CC8F06 /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+				6CBBFBD31FA415DD00CC8F06 /* Playlist.cpp */,
+				6CBBFBD41FA415DE00CC8F06 /* Playlist.hpp */,
+			);
+			name = Playlist;
+			sourceTree = "<group>";
+		};
+		6CBBFBDA1FA4162700CC8F06 /* Playlists */ = {
+			isa = PBXGroup;
+			children = (
+				6CBBFBD71FA4161900CC8F06 /* Playlists.cpp */,
+				6CBBFBD81FA4161900CC8F06 /* Playlists.hpp */,
+			);
+			name = Playlists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,11 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CBBFBCC1FA40A7500CC8F06 /* User.cpp in Sources */,
+				6CBBFBD51FA415DE00CC8F06 /* Playlist.cpp in Sources */,
 				6C7B8FC41F9B85B900BDDF2D /* genericClass.cpp in Sources */,
 				6C7763EA1F970419001C42C1 /* Song.cpp in Sources */,
 				6C0842291FA0161A00463947 /* Track.cpp in Sources */,
 				6C7763E21F9703F1001C42C1 /* main.cpp in Sources */,
 				6C0842311FA01B2800463947 /* Recording.cpp in Sources */,
+				6CBBFBD91FA4161900CC8F06 /* Playlists.cpp in Sources */,
 				6C7763ED1F9987F0001C42C1 /* Songs.cpp in Sources */,
 				6C08422D1FA0181400463947 /* Tracks.cpp in Sources */,
 				6CBBFBD01FA40B0800CC8F06 /* Users.cpp in Sources */,
