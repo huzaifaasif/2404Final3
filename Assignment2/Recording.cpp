@@ -42,9 +42,12 @@ int Recording::getAlbumID(){
     return albumID;
 }
 
-Track *Recording::createNewPtr(){
-    Track *ptr = nullptr;
-    return ptr;
+string Recording::getTitle(){
+    return title;
+}
+
+void Recording::clearPointer(int index){
+    trackPtrCollection.erase(trackPtrCollection.begin()+index);
 }
 
 void Recording::addTrackPtr(Track *track){

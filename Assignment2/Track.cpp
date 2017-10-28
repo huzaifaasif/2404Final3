@@ -25,12 +25,23 @@ Track::Track(int track_id, int albumID, int songID, int track_number){
 }
 
 //getters
+
 int Track::getAlbumID(){
     return albumID;
 }
 
 int Track::getSongID(){
     return songID;
+}
+
+size_t Track::getTrackToSongCollectionSize() const{
+    return tracksToSongCollection.size();
+}
+
+//setters
+
+void Track::setTrackToSongCollection(Song *song){
+    tracksToSongCollection.push_back(song);
 }
 
 void Track::setSongPtr(Song *songPtr){

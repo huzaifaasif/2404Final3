@@ -25,6 +25,7 @@ public:
     
     string toString() const;
     
+    string getTitle();
     int getAlbumID();
     
     void printTrackPtrCollection(class Tracks *tracks);
@@ -38,7 +39,10 @@ public:
     void addTrackPtr(class Track *Track);
     Track *createNewPtr();
     
+    //delete
+    void clearPointer(int index);
     
+        
 private:
     string title, artist, producer;
     int year, albumID;

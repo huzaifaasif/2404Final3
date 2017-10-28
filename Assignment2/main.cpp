@@ -31,8 +31,7 @@ int main() {
         
         getline(cin, input);
         transform(input.begin(), input.end(), input.begin(), ::tolower);
-        
-        
+       
         //if unrecognizable commands are entered, print error
         
         if(!genericClass::errorCheck(input)){

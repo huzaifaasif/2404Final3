@@ -43,28 +43,20 @@ void genericClass::parseIntFromString(string &str, int &id){
     istringstream stream(temp);
     stream >> id;
     
-    
 }
 
-//delete
-void genericClass::deleteItems(string &input){
-    
-   
-    
-    
-}
 
 //parsing commands
-void genericClass::performOperation(string &input){
+void genericClass::performOperation(string &lowercaseInput){
     
     string operation; //add, delete, show (first word)
     string collection;    //song, recording, playlist, etc
     string keyword;     //s, r
-    size_t hyphen = input.find("-");
-    operation = input.substr(0, input.find(" ")); //first word
+    size_t hyphen = lowercaseInput.find("-");
+    operation = lowercaseInput.substr(0, lowercaseInput.find(" ")); //first word
     
     
-    keyword = input.substr(hyphen+1, 1);
+    keyword = lowercaseInput.substr(hyphen+1, 1);
     
     if (hyphen==string::npos){
         printError();
@@ -72,10 +64,11 @@ void genericClass::performOperation(string &input){
     }
     
     
-//-----adding----
+    string input = lowercaseInput.substr(hyphen+2);
+    toTitleCase(input);
+//-----adding-----
     
     if (operation == "add"){
-        
 
         if (keyword=="s"){  //if it's "s", then create song object+append to the vector
             
@@ -85,7 +78,8 @@ void genericClass::performOperation(string &input){
         }
         else if (keyword == "r"){
             recordings.getData(input, tracks);
-            //recording_ptr = &recordings;
+            
+            recording_ptr = &recordings;
             
         }
         else if (keyword == "t"){
@@ -95,8 +89,9 @@ void genericClass::performOperation(string &input){
             recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks); //points recording to respective tracks
             countForTracks++;
             
-            if (count<=tracks_ptr->sizeOfTrackCollection()){
-                songs.tracksToRespectiveSongs(tracks_ptr, count);
+            if (count<=tracks_ptr->sizeOfTrackCollection() && !songs.isEmpty()) {
+                //remove from song
+                tracks.tracksToRespectiveSongs(song_ptr, count);
             }
             count++;
             
@@ -111,25 +106,60 @@ void genericClass::performOperation(string &input){
             
         }
     }
+    //---deleting----
     
     else if (operation == "delete"){
         
-        
         if (keyword == "s"){
-            songs.removeData(input);
+            
+            if (!songs.isEmpty()){
+                songs.removeData(input);
+                return;
+            }
+            cout <<"Need to populate the collection prior to deleting!"<<"\n\n";
         }
         
         else if (keyword == "r"){
-            recordings.removeData(input);
+            
+            if (!recordings.isEmpty()){
+                recordings.removeData(input);
+                return;
+            }
+            cout <<"Need to populate the collection prior to deleting!"<<"\n\n";
         }
         
         else if (keyword == "t"){
-            tracks.removeData(input);
+            
+            if (!tracks.isEmpty()){
+                tracks.removeData(input, recording_ptr);
+                return;
+            }
+            cout <<"Need to populate the collection prior to deleting!"<<"\n\n";
         }
         
     }
+    //show command
+    
+    else if (operation == "show"){
+       
+        if (keyword == "t"){
+            tracks.showTracksCollection(tracks_ptr);
+        }
+        
+        else if (keyword == "s"){
+            
+            song_ptr = &songs;
+            songs.showSongCollection(song_ptr);
+        }
+        
+        else if (keyword == "r"){
+            recording_ptr=&recordings;
+            recordings.showRecordingCollection(recording_ptr);
+        }
+    }
     
 }
+
 //tracks.tracksToRespectiveAlbum(recording_ptr);
 //
 //count++;
@@ -158,9 +188,11 @@ void genericClass::readFile(string fileName){
     cout <<endl;
 }
 
+
+
 bool genericClass::errorCheck(string &input){
     
-    cout <<"INPUT: "<<input<<endl;
+  
     
     // size_t add_pos, remove_pos, show_pos;
     quit = input.find(".quit");
@@ -179,6 +211,43 @@ bool genericClass::errorCheck(string &input){
     
     return false;
     
+}
+
+string genericClass::toTitleCase(string &str){
+    bool capWord = false;
+    string s;
+    size_t pos;
+    
+    for (char &c: str){
+        if (isspace(c)){
+            capWord = false;
+        }
+        
+        if (capWord == false && isalpha(c)){
+            c=toupper(c);
+            capWord=true;
+        }
+        
+        s.append(1,c);
+
+    }
+    
+    pos = s.find("The ");
+    
+    if (pos==0){     //if "The" is found in the string, move it to the end
+        moveToEnd(s, "The ");
+        str = s;
+    }
+    
+    return s;
+
+}
+void genericClass::moveToEnd(string &str, string value){
+    size_t pos = str.find(value); // finds position in string
+    //cout <<"STRING: "<<str<<endl;
+    
+    str.erase(pos,value.length()); //erases specified portion of the string
+    str.append(" "+value); //appends erased string
 }
 
 void genericClass::printError(){

@@ -85,13 +85,13 @@ void Songs::getData(string &input){
     
     Song *song = new Song(title, composer, id);
 
-    //this->add(song);
     
     //Appending it to the collection vector
     collection.push_back(song);
     
- 
-    cout<<*this<<endl;
+    cout <<"Adding ";
+     cout<<*this<<endl;
+    
 }
 
 
@@ -161,6 +161,9 @@ void Songs::tracksToRespectiveSongs(Tracks *tracks, int count){
     //cout <<track->getSongPointer()<<endl;
     
 }
+Song *Songs::getSongInstance(int index){
+    return collection[index];
+}
 
 //remove
 void Songs::removeData(string input){
@@ -171,21 +174,47 @@ void Songs::removeData(string input){
     for (int i=0; i<collection.size(); i++){
         
         if (id == collection[i]->getID()){
+            
+            cout <<"Deleting "<<collection[i]->getTitle()<<endl;
+            
             collection.erase(collection.begin()+i);
-            break;
+            cout <<"Song collection size is "<<getSongCollectionSize()<<endl<<endl;
+            return;
         }
     }
-    
-    
+    cout <<"This song doesn't exist in the collection!"<<endl;
+    printf ("\n");
 }
+
 void Songs::printOn(ostream & o) const {
-    cout <<"SONGS: "<<endl;
+    
+    cout <<"SONG: "<<endl;
     for (int i=0; i<collection.size(); i++){
         o <<(*collection[i]).toString()<<endl;
     }
+    cout <<"Song collection size is "<<collection.size()<<endl;
+
+}
+
+bool Songs::isEmpty() const{
+    return collection.empty();
+}
+
+size_t Songs::getSongCollectionSize(){
+    return collection.size();
+}
+
+
+void Songs::showSongCollection(Songs *songs){
     
-    cout <<"Size: "<<collection.size()<<endl;
-    
+    if (!collection.empty()){
+       
+        cout <<"Showing ";
+        cout<<*this;
+       
+        return;
+    }
+    cout<<"Song collection is empty!"<<endl<<endl;
 }
 
 ostream & operator<<(ostream & out, const Songs & Songs){

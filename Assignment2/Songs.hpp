@@ -26,17 +26,28 @@ public:
     void add(Song * aSong);
     void remove(Song & aSong);
     
+    //getter
     void getData(string &input);
-    void printOn(ostream & out) const;
+    size_t getSongCollectionSize();
+    Song *getSongInstance(int index);
+    
+    
+    //bool
+    bool isEmpty() const;
+    
+    //show
+    void showSongCollection(Songs *song);
     
     void tracksToRespectiveSongs(Tracks *tracks, int count);
     
+    void printOn(ostream & out) const;
     //remove data
     void removeData(string input);
     
 private:
-    
+    bool displayingStatus;
     vector<Song*> collection;   //pointer to Song object
+    
     vector<Song*>::iterator findPosition(Song & aSong);
 };
 

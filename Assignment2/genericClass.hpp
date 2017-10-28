@@ -25,11 +25,13 @@ public:
      static void parseIntFromString(string &input, int &id);
      void readFile(string fileName);
     
-     void deleteItems(string &input);
-    
     //error related methods
     static bool errorCheck(string &input);
     static void printError();
+    
+    static string toTitleCase(string &str);
+    static void moveToEnd(string &str, string value);
+    
     
 private:
     static size_t add_pos, delete_pos, help_pos, show_pos, read_pos, command, log_pos, quit;
@@ -41,12 +43,14 @@ private:
     
     Tracks * tracks_ptr;
     Songs * song_ptr;
+
     Track track;
     Tracks tracks;
     
     int countForTracks=0;
     int count=0;
-   
+    
+       
 };
 
 

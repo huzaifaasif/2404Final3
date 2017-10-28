@@ -30,19 +30,26 @@ public:
     //getters
     int getAlbumID(int index);
     int getSongID(int index);
+    size_t getTrackCollectionSize();
+    
+    bool isEmpty() const;
     
     //setter
     void setSongPtr(Song *songPtr);
    // void tracksToRespectiveAlbum(class Recordings *recordings);
     
-    void removeData(string input);
+    void tracksToRespectiveSongs(class Songs *song_ptr, int count);
+    
+    void showTracksCollection(Tracks *tracks) const;
+    
+    void removeData(string input, class Recordings *rec_ptr);
     void printOn(ostream &o) const;
     
     
 private:
    // vector<Recording*> tracks_collection;
     vector<Track*> tracks_collection;
-   
+    
 };
 ostream & operator<<(ostream & out, const Tracks & tracks);
 #endif /* Tracks_hpp */

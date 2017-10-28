@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <string>
 #include "Recording.hpp"
+#include <vector>
 
 using namespace std;
 
@@ -31,16 +32,22 @@ public:
     class Recording *getRecordingPointer();
     class Song *getSongPointer();
     
+  
     //setter
     void setRecordingPtr(class Recording *recordingPtr);
     
     void setSongPtr(class Song *songPtr);
+    void setTrackToSongCollection(Song *song);
+    size_t getTrackToSongCollectionSize() const;
     
 private:
     int track_id, albumID, songID, track_number;
     
     class Song *ptr_song;
     class Recording *ptr_rec;
+    
+    vector<Song*> tracksToSongCollection;
+    
     
 };
 

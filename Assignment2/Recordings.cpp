@@ -85,9 +85,9 @@ void Recordings::getData(string &input, Tracks &tracks){
     
     
     //-->tracks.setTrackCollection(recording); //populating track
-    
+    cout <<"Adding ";
     cout <<*this<<endl;
-    cout <<tracks<<endl;    
+   // cout <<tracks<<endl;
 }
 
 //void Recordings::populatingTrack(Tracks &tracks, Recording *recording){
@@ -107,18 +107,20 @@ void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
                 
                 getRecordingInstance(i)->addTrackPtr(tracks->getTrackInstance(j));
                 
+                cout <<"Track of song ID "<<tracks->getTrackInstance(j)->getSongID()<< " is added to Recording's album "<<recordings_collection[i]->getTitle()<<endl<<endl;
+            
             }
         }
     
     }
     
-    for (int i=0; i<getRecordingCollectionSize(); i++){
-        
-        if (i<=getRecordingInstance(i)->getTrackPtrCollectionSize()){
-            cout <<"Album ID: "<<getRecordingInstance(i)->getAlbumID()<<endl;
-            getRecordingInstance(i)->printTrackPtrCollection(tracks);
-        }
-    }
+//    for (int i=0; i<getRecordingCollectionSize(); i++){
+//        
+//        if (i<=getRecordingInstance(i)->getTrackPtrCollectionSize()){
+//            cout <<"Album ID: "<<getRecordingInstance(i)->getAlbumID()<<endl;
+//            getRecordingInstance(i)->printTrackPtrCollection(tracks);
+//        }
+//    }
 //    for (int i=0; i<recordings_collection.size(); i++){
 //        cout <<"ID: "<<tracks->getAlbumID(i)<<endl;
 //        getRecordingInstance(i)->printTrackPtrCollection(tracks);
@@ -156,26 +158,48 @@ Recording *Recordings::getRecordingInstance(int index){
     return recordings_collection[index];
 }
 
+
 void Recordings::removeData(string input){
     int id;
     genericClass::parseIntFromString(input, id);
     
     for (int i=0; i<recordings_collection.size(); i++){
+    
         if (id == recordings_collection[i]->getAlbumID()){
+            
+            cout <<"Deleting "<<recordings_collection[i]->getTitle()<<endl;
+            
             recordings_collection.erase(recordings_collection.begin()+i);
+            
             break;
         }
     }
 }
 
+bool Recordings::isEmpty() const{
+    return recordings_collection.empty();
+}
+
 void Recordings::printOn(ostream & o) const {
-    cout <<"RECORDINGS: "<<endl;
+    cout <<"RECORDING: "<<endl;
     for (int i=0; i<recordings_collection.size(); i++){
         o <<(*recordings_collection[i]).toString()<<endl;
     }
     
-    cout <<"Size: "<<recordings_collection.size()<<endl;
+    cout <<"Recording collection size is "<<recordings_collection.size()<<endl<<endl;
     
+}
+
+void Recordings::showRecordingCollection(Recordings *recordings){
+    
+    if (!recordings_collection.empty()){
+        
+        cout <<"Showing ";
+        cout <<*this;
+        
+        return;
+    }
+    cout<<"Recording collection is empty!"<<endl<<endl;
 }
 
 ostream & operator<<(ostream & out, const Recordings & recordings){

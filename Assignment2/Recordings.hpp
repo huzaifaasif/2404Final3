@@ -38,7 +38,13 @@ public:
     
     //delete
     void removeData(string input);
+  
     void printOn(ostream &o) const;
+    
+    bool isEmpty() const;
+    
+    void showRecordingCollection(Recordings *recordings);
+
     
 private:
     vector<Recording*> recordings_collection;
