@@ -156,6 +156,17 @@ Recording *Recordings::getRecordingInstance(int index){
     return recordings_collection[index];
 }
 
+void Recordings::removeData(string input){
+    int id;
+    genericClass::parseIntFromString(input, id);
+    
+    for (int i=0; i<recordings_collection.size(); i++){
+        if (id == recordings_collection[i]->getAlbumID()){
+            recordings_collection.erase(recordings_collection.begin()+i);
+            break;
+        }
+    }
+}
 
 void Recordings::printOn(ostream & o) const {
     cout <<"RECORDINGS: "<<endl;

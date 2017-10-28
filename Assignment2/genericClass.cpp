@@ -19,7 +19,8 @@ using namespace std;
 size_t genericClass::quit=0,
 genericClass::help_pos=0,
 genericClass::add_pos=0,
-genericClass::remove_pos=0,
+genericClass::delete_pos=0,
+
 genericClass::show_pos=0,
 genericClass::read_pos=0,
 genericClass::command=0,
@@ -45,6 +46,14 @@ void genericClass::parseIntFromString(string &str, int &id){
     
 }
 
+//delete
+void genericClass::deleteItems(string &input){
+    
+   
+    
+    
+}
+
 //parsing commands
 void genericClass::performOperation(string &input){
     
@@ -54,44 +63,69 @@ void genericClass::performOperation(string &input){
     size_t hyphen = input.find("-");
     operation = input.substr(0, input.find(" ")); //first word
     
+    
+    keyword = input.substr(hyphen+1, 1);
+    
     if (hyphen==string::npos){
         printError();
         return;
     }
     
-    keyword = input.substr(hyphen+1, 1);
     
-    if (keyword=="s"){  //if it's "s", then create song object+append to the vector
+//-----adding----
+    
+    if (operation == "add"){
         
-        songs.getData(input);
-        song_ptr = &songs;
 
-    }
-    else if (keyword == "r"){
-        recordings.getData(input, tracks);
-        //recording_ptr = &recordings;
-        
-    }
-    else if (keyword == "t"){
-        tracks.getData(input);  //parsing track info ie albumID etc...
-        
-        tracks_ptr = &tracks;
-        recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks); //points recording to respective tracks
-        countForTracks++;
-        
-        if (count<=tracks_ptr->sizeOfTrackCollection()){
-            songs.tracksToRespectiveSongs(tracks_ptr, count);
+        if (keyword=="s"){  //if it's "s", then create song object+append to the vector
+            
+            songs.getData(input);
+            song_ptr = &songs;
+
         }
-        count++;
+        else if (keyword == "r"){
+            recordings.getData(input, tracks);
+            //recording_ptr = &recordings;
+            
+        }
+        else if (keyword == "t"){
+            tracks.getData(input);  //parsing track info ie albumID etc...
+            
+            tracks_ptr = &tracks;
+            recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks); //points recording to respective tracks
+            countForTracks++;
+            
+            if (count<=tracks_ptr->sizeOfTrackCollection()){
+                songs.tracksToRespectiveSongs(tracks_ptr, count);
+            }
+            count++;
+            
+            
+    //        for (int i=0; i<recordings.getRecordingCollectionSize(); i++){
+    //            
+    //            if (i<=recordings.getRecordingInstance(i)->getTrackPtrCollectionSize()){
+    //                cout <<"Album ID: "<<recordings.getRecordingInstance(i)->getAlbumID()<<endl;
+    //                recordings.getRecordingInstance(i)->printTrackPtrCollection(tracks_ptr);
+    //            }
+    //        }
+            
+        }
+    }
+    
+    else if (operation == "delete"){
         
         
-//        for (int i=0; i<recordings.getRecordingCollectionSize(); i++){
-//            
-//            if (i<=recordings.getRecordingInstance(i)->getTrackPtrCollectionSize()){
-//                cout <<"Album ID: "<<recordings.getRecordingInstance(i)->getAlbumID()<<endl;
-//                recordings.getRecordingInstance(i)->printTrackPtrCollection(tracks_ptr);
-//            }
-//        }
+        if (keyword == "s"){
+            songs.removeData(input);
+        }
+        
+        else if (keyword == "r"){
+            recordings.removeData(input);
+        }
+        
+        else if (keyword == "t"){
+            tracks.removeData(input);
+        }
         
     }
     
@@ -132,16 +166,16 @@ bool genericClass::errorCheck(string &input){
     quit = input.find(".quit");
     help_pos = input.find(".help");
     add_pos = input.find("add");
-    remove_pos = input.find("delete");
+    
+    delete_pos = input.find("delete");
     show_pos = input.find("show");
     read_pos = input.find(".read");
-    
+
     log_pos = input.find(".log");
     
-    if (add_pos!=string::npos || remove_pos!=string::npos || show_pos!=string::npos || read_pos!=string::npos || help_pos!=string::npos || quit!=string::npos || log_pos!=string::npos){
+    if (add_pos!=string::npos || show_pos!=string::npos || delete_pos!=string::npos || read_pos!=string::npos || help_pos!=string::npos || quit!=string::npos || log_pos!=string::npos){
             return true;
     }
-    
     
     return false;
     

@@ -30,7 +30,9 @@ public:
     void printOn(ostream & out) const;
     
     void tracksToRespectiveSongs(Tracks *tracks, int count);
- 
+    
+    //remove data
+    void removeData(string input);
     
 private:
     

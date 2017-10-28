@@ -52,7 +52,7 @@ int main() {
             else if (input == ".read"){
                 general_instance.readFile(scriptFile);
             }
-            
+           
             //performing any operation
             else{
                 //genericClass::performOperation(input);

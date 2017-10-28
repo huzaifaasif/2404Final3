@@ -162,6 +162,22 @@ void Songs::tracksToRespectiveSongs(Tracks *tracks, int count){
     
 }
 
+//remove
+void Songs::removeData(string input){
+    
+    int id;
+    genericClass::parseIntFromString(input, id);
+    
+    for (int i=0; i<collection.size(); i++){
+        
+        if (id == collection[i]->getID()){
+            collection.erase(collection.begin()+i);
+            break;
+        }
+    }
+    
+    
+}
 void Songs::printOn(ostream & o) const {
     cout <<"SONGS: "<<endl;
     for (int i=0; i<collection.size(); i++){

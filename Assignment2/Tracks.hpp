@@ -35,6 +35,7 @@ public:
     void setSongPtr(Song *songPtr);
    // void tracksToRespectiveAlbum(class Recordings *recordings);
     
+    void removeData(string input);
     void printOn(ostream &o) const;
     
     

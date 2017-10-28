@@ -22,15 +22,17 @@ public:
     
     //parse command strings methods
      void performOperation(string &input);
-    static void parseIntFromString(string &input, int &id);
+     static void parseIntFromString(string &input, int &id);
      void readFile(string fileName);
+    
+     void deleteItems(string &input);
     
     //error related methods
     static bool errorCheck(string &input);
     static void printError();
     
 private:
-    static size_t add_pos, help_pos, remove_pos, show_pos, read_pos, command, log_pos, quit;
+    static size_t add_pos, delete_pos, help_pos, show_pos, read_pos, command, log_pos, quit;
     
     //songs
     Songs songs; //instantiating Songs object

@@ -119,6 +119,18 @@ int Tracks::getSongID(int index){
 //    
 //}
 
+void Tracks::removeData(string input){
+    int id;
+    genericClass::parseIntFromString(input, id);
+    
+    for (int i=0; i<tracks_collection.size(); i++){
+        if (id == tracks_collection[i]->getAlbumID()){
+            tracks_collection.erase(tracks_collection.begin()+i);
+            break;
+        }
+    }
+}
+
 void Tracks::printOn(ostream &o)const{
     cout<<"TRACKS: "<<endl;
     

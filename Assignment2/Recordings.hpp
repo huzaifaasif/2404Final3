@@ -36,6 +36,8 @@ public:
     //setter
     void setRecordingPtr(Recording *recording);
     
+    //delete
+    void removeData(string input);
     void printOn(ostream &o) const;
     
 private:
