@@ -77,9 +77,11 @@ void Songs::getData(string &input){
     
     
     //parsing title and composer
-    string title = input.substr(start, diff);
-    string composer = input.substr(composer_start+1, diff_composer-2);
+    string title = input.substr(start+1, diff-2);
+    genericClass::toTitleCase(title);
     
+    string composer = input.substr(composer_start+1, diff_composer-2);
+    genericClass::toTitleCase(composer);
     
     //calling constructor to create a Song object
     

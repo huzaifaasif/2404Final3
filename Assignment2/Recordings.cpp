@@ -59,7 +59,7 @@ void Recordings::getData(string &input, Tracks &tracks){
  
     //error detection
     
-    if (title_start_pos==string::npos ||title_end_pos==string::npos || artist_start_pos==string::npos || artist_end_pos==string::npos || producer_start_pos==string::npos || producer_end_pos==string::npos){
+    if (title_start_pos==string::npos ||title_end_pos==string::npos || artist_start_pos==string::npos || artist_end_pos==string::npos || producer_start_pos==string::npos || producer_end_pos==string::npos ){
         
         genericClass::printError();
         return;
@@ -68,7 +68,7 @@ void Recordings::getData(string &input, Tracks &tracks){
     genericClass::parseIntFromString(input, albumID);
     genericClass::parseIntFromString(year_in_string, year);
     
-    if (albumID == -1){
+    if (albumID == -1 || year==-1){
         genericClass::printError();
         return;
     }
@@ -77,6 +77,7 @@ void Recordings::getData(string &input, Tracks &tracks){
     string artist = input.substr(artist_start_pos, diff_artist);
     string producer = input.substr(producer_start_pos, diff_producer);
     
+    genericClass::toTitleCase(title);
     
     Recording *recording = new Recording(albumID, title, artist, producer, year);
     

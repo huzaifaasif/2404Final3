@@ -51,16 +51,16 @@ void genericClass::parseIntFromString(string &str, int &id){
 
 
 //parsing commands
-void genericClass::performOperation(string &lowercaseInput){
+void genericClass::performOperation(string &input){
     
     string operation; //add, delete, show (first word)
     string collection;    //song, recording, playlist, etc
     string keyword;     //s, r
-    size_t hyphen = lowercaseInput.find("-");
-    operation = lowercaseInput.substr(0, lowercaseInput.find(" ")); //first word
+    size_t hyphen = input.find("-");
+    operation = input.substr(0, input.find(" ")); //first word
     
     
-    keyword = lowercaseInput.substr(hyphen+1, 1);
+    keyword = input.substr(hyphen+1, 1);
     
     if (hyphen==string::npos){
         printError();
@@ -68,8 +68,9 @@ void genericClass::performOperation(string &lowercaseInput){
     }
     
     
-    string input = lowercaseInput.substr(hyphen+2);
-    toTitleCase(input);
+//    string input = lowercaseInput.substr(hyphen+2);
+//    toTitleCase(input);
+//    cout <<"NEW IN: "<<input<<endl;
 //-----adding-----
     
     if (operation == "add"){

@@ -5,8 +5,10 @@ add -s 1000 "I Saw Her Standing There" "Paul McCartney, John Lennon"
 add -s 1001 "Misery" "Paul McCartney, John Lennon"
 add -s 1002 "Anna (Go To Him)" "Arthur Alexander"
 add -s 1003 "Chains" "Gerry Goffin, Carole King"
+add -s 1021 "Roll Over Beethhoven" "Chuck Berry"
 
 add -t 1 100 1000 1
 add -t 2 100 1001 2
 add -t 3 100 1002 3
 add -t 4 100 1003 4
+add -t 22 101 1021 8
