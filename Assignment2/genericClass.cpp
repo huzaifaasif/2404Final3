@@ -77,24 +77,25 @@ void genericClass::performOperation(string &lowercaseInput){
         if (keyword=="s"){  //if it's "s", then create song object+append to the vector
             
             //TRACKS store songs hence they have to exist first
-            if(tracks.isEmpty()){
-                cout <<"Enter tracks first! "<<endl<<endl;
-                return;
-            }
+//            if(tracks.isEmpty()){
+//                cout <<"Enter tracks first! "<<endl<<endl;
+//                return;
+//            }
             //adding song
                 songs.getData(input);
                 song_ptr = &songs;
             
             //storing reference of Songs in Tracks
-                tracks.tracksToRespectiveSongs(song_ptr, count);
-                count++;
+            
+//            if (!tracks.isEmpty()){
+//                tracks.tracksToRespectiveSongs(song_ptr, count);
+//                count++;
+//            }
         
             //if (count <=tracks_ptr->sizeOfTrackCollection() && !tracks.isEmpty()){
             //if (!tracks.isEmpty()){
             
             //}
-            
-            
             
         }
         else if (keyword == "r"){
@@ -111,14 +112,22 @@ void genericClass::performOperation(string &lowercaseInput){
                 return;
             }
             
+            if (songs.isEmpty()){
+                cout <<"Enter songs first! "<<endl<<endl;
+                return;
+            }
+            
             //adding tracks
             tracks.getData(input);
-
             tracks_ptr = &tracks;
             
             //storing reference of Tracks in Recordings
             recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks);
             countForTracks++;
+            
+            //storing reference of Songs in Tracks
+            tracks.tracksToRespectiveSongs(song_ptr, count);
+            count++;
             
            
             

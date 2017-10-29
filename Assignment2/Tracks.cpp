@@ -32,6 +32,7 @@ Tracks::~Tracks(){
     for (auto *ptr: tracks_collection){
         delete ptr;
     }
+    
     tracks_collection.clear();
 }
 
@@ -178,7 +179,7 @@ Track Tracks::getTrackInstance(int index){
 void Tracks::tracksToRespectiveSongs(Songs *songs, int count){
     
     
-    for (int i=count; i<songs->getSongCollectionSize(); i++){
+    for (int i=count; i<this->sizeOfTrackCollection(); i++){
         
         if (tracks_collection[i]->getSongID() == songs->getSongInstance(i)->getID()){
             
@@ -186,6 +187,7 @@ void Tracks::tracksToRespectiveSongs(Songs *songs, int count){
             tracks_collection[i]->setTrackToSongCollection(songs->getSongInstance(i));
             
             cout <<"Song "<<songs->getSongInstance(i)->getTitle()<<" id added to Track "<<tracks_collection[i]->getSongID()<<endl<<endl;
+           // break;
             
         }
     }

@@ -22,6 +22,7 @@ using namespace std;
 class Track{
 public:
     Track();
+    ~Track();
     Track(int track_id, int albumID, int songID, int track_number);
     
     void clearPointer(int index);

@@ -24,6 +24,15 @@ Track::Track(int track_id, int albumID, int songID, int track_number){
     this->track_number=track_number;
 }
 
+Track::~Track(){
+    
+    for (auto *ptr: tracksToSongCollection){
+        delete ptr;
+    }
+    
+    tracksToSongCollection.clear();
+}
+
 //getters
 
 int Track::getAlbumID(){
