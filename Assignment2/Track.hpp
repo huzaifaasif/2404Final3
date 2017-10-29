@@ -24,6 +24,7 @@ public:
     Track();
     Track(int track_id, int albumID, int songID, int track_number);
     
+    void clearPointer(int index);
     string toString() const;
     
     //getters
@@ -31,6 +32,7 @@ public:
     int getSongID();
     class Recording *getRecordingPointer();
     class Song *getSongPointer();
+    Song *getTracksToSongCollectionPtr(int index);
     
   
     //setter

@@ -42,7 +42,7 @@ public:
     
     void printOn(ostream & out) const;
     //remove data
-    void removeData(string input);
+    void removeData(string input, Tracks *track_ptr);
     
 private:
     bool displayingStatus;

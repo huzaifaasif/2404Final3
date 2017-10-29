@@ -132,9 +132,9 @@ void Songs::tracksToRespectiveSongs(Tracks *tracks, int count){
     for (int i=count; i<collection.size(); i++){
         
         if (collection[i]->getID() == tracks->getSongID(i)){
-            tracks->getTrackInstance(i)->setSongPtr(collection[i]);
+            tracks->getTrackAddress(i)->setSongPtr(collection[i]);
             
-            cout <<"Track->Song: "<<tracks->getTrackInstance(i)->getSongPointer()<<endl;
+            cout <<"Track->Song: "<<tracks->getTrackAddress(i)->getSongPointer()<<endl;
             cout <<"Song ID: "<<collection[i]->getID()<<", "<<tracks->getSongID(i)<<endl;
             
             break;
@@ -161,12 +161,13 @@ void Songs::tracksToRespectiveSongs(Tracks *tracks, int count){
     //cout <<track->getSongPointer()<<endl;
     
 }
+
 Song *Songs::getSongInstance(int index){
     return collection[index];
 }
 
 //remove
-void Songs::removeData(string input){
+void Songs::removeData(string input, Tracks *track_ptr){
     
     int id;
     genericClass::parseIntFromString(input, id);
@@ -177,7 +178,13 @@ void Songs::removeData(string input){
             
             cout <<"Deleting "<<collection[i]->getTitle()<<endl;
             
+            Track *trackPtr =track_ptr->getTrackAddress(i);
             collection.erase(collection.begin()+i);
+            
+            trackPtr->clearPointer(i);
+            
+            //track_ptr->gett.clearPointer(i);
+            
             cout <<"Song collection size is "<<getSongCollectionSize()<<endl<<endl;
             return;
         }

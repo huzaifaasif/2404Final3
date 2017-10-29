@@ -26,6 +26,10 @@ genericClass::read_pos=0,
 genericClass::command=0,
 genericClass::log_pos=0;
 
+string genericClass::log_command=" ",
+genericClass::start = "start",
+genericClass::stop = "stop";
+
 
 void genericClass::parseIntFromString(string &str, int &id){
     string temp;
@@ -72,9 +76,26 @@ void genericClass::performOperation(string &lowercaseInput){
 
         if (keyword=="s"){  //if it's "s", then create song object+append to the vector
             
-            songs.getData(input);
-            song_ptr = &songs;
-
+            //TRACKS store songs hence they have to exist first
+            if(tracks.isEmpty()){
+                cout <<"Enter tracks first! "<<endl<<endl;
+                return;
+            }
+            //adding song
+                songs.getData(input);
+                song_ptr = &songs;
+            
+            //storing reference of Songs in Tracks
+                tracks.tracksToRespectiveSongs(song_ptr, count);
+                count++;
+        
+            //if (count <=tracks_ptr->sizeOfTrackCollection() && !tracks.isEmpty()){
+            //if (!tracks.isEmpty()){
+            
+            //}
+            
+            
+            
         }
         else if (keyword == "r"){
             recordings.getData(input, tracks);
@@ -83,24 +104,37 @@ void genericClass::performOperation(string &lowercaseInput){
             
         }
         else if (keyword == "t"){
-            tracks.getData(input);  //parsing track info ie albumID etc...
             
+            //RECORDINGS store Tracks
+            if (recordings.isEmpty()){
+                cout <<"Enter recordings first! "<<endl<<endl;
+                return;
+            }
+            
+            //adding tracks
+            tracks.getData(input);
+
             tracks_ptr = &tracks;
-            recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks); //points recording to respective tracks
+            
+            //storing reference of Tracks in Recordings
+            recordings.recordingsToRespectiveTrack(tracks_ptr, countForTracks);
             countForTracks++;
             
-            if (count<=tracks_ptr->sizeOfTrackCollection() && !songs.isEmpty()) {
-                //remove from song
-                tracks.tracksToRespectiveSongs(song_ptr, count);
-            }
-            count++;
+           
+            
+            //****** to BE REMOVED*******
+//            if (count<=tracks_ptr->sizeOfTrackCollection() && !songs.isEmpty()) {
+//                //remove from song
+//                tracks.tracksToRespectiveSongs(song_ptr, count);
+           // }
+            
             
             
     //        for (int i=0; i<recordings.getRecordingCollectionSize(); i++){
     //            
-    //            if (i<=recordings.getRecordingInstance(i)->getTrackPtrCollectionSize()){
+    //            if (i<=recordings.getRecordingInstance(i)->getrecordingToTrackCollectionSize()){
     //                cout <<"Album ID: "<<recordings.getRecordingInstance(i)->getAlbumID()<<endl;
-    //                recordings.getRecordingInstance(i)->printTrackPtrCollection(tracks_ptr);
+    //                recordings.getRecordingInstance(i)->printrecordingToTrackCollection(tracks_ptr);
     //            }
     //        }
             
@@ -113,7 +147,8 @@ void genericClass::performOperation(string &lowercaseInput){
         if (keyword == "s"){
             
             if (!songs.isEmpty()){
-                songs.removeData(input);
+                tracks_ptr = &tracks;
+                songs.removeData(input, tracks_ptr);
                 return;
             }
             cout <<"Need to populate the collection prior to deleting!"<<"\n\n";
@@ -159,6 +194,70 @@ void genericClass::performOperation(string &lowercaseInput){
     }
     
 }
+//--------LOGGING---------
+
+bool genericClass::logErrorCheck(string input, size_t log_pos){
+    
+    if (input.length()>5){ //if there's some command after .log
+        log_pos = log_pos + 5; //.log = 4
+        log_command = input.substr(log_pos, input.substr(log_pos).find(" "));
+        cout <<"Command: "<<log_command<<endl;
+        
+        
+        if (log_command==start || log_command == stop){
+            return true;
+        }
+    }
+    return false;
+}
+
+
+void genericClass::logCommands(string input, int count){
+ 
+    string log_file = "logFile"+ to_string(count) + ".txt";
+    string log_file_input;
+    
+    
+    if (!logErrorCheck(input,0)){
+        
+        printError();    //print error if its not recognizable log command
+        
+        return;
+    }
+    
+    if (log_command == "start"){
+        ofstream file_out(log_file, ofstream::out);
+        
+        if (!file_out){
+            cout <<"File doesn't open!"<<endl;
+            return;
+        }
+        
+        cout <<"Logging session starts: "<<log_file<<endl<<endl;
+        
+        while (getline(cin, log_file_input)){
+            
+
+            if (log_file_input == ".log stop"){
+                cout <<"Stopping logging! "<<endl<<endl;
+                file_out.close();
+                break;
+            }
+            
+            file_out<<log_file_input<<endl;
+        }
+        count++;
+        log_file="";
+    }
+    
+    
+
+    
+    
+    
+}
+
+//---------END LOGGING---------
 
 //tracks.tracksToRespectiveAlbum(recording_ptr);
 //
@@ -190,7 +289,7 @@ void genericClass::readFile(string fileName){
 
 
 
-bool genericClass::errorCheck(string &input){
+bool genericClass::errorCheck(string &input, size_t &log_pos){
     
   
     
@@ -234,7 +333,7 @@ string genericClass::toTitleCase(string &str){
     
     pos = s.find("The ");
     
-    if (pos==0){     //if "The" is found in the string, move it to the end
+    if (pos!=string::npos){     //if "The" is found in the string, move it to the end
         moveToEnd(s, "The ");
         str = s;
     }

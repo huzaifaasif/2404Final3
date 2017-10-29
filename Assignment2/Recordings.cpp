@@ -105,9 +105,9 @@ void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
             
             if ( recordings_collection[i]->getAlbumID() == tracks->getAlbumID(j) ){
                 
-                getRecordingInstance(i)->addTrackPtr(tracks->getTrackInstance(j));
+                getRecordingInstance(i)->addTrackPtr(tracks->getTrackAddress(j));
                 
-                cout <<"Track of song ID "<<tracks->getTrackInstance(j)->getSongID()<< " is added to Recording's album "<<recordings_collection[i]->getTitle()<<endl<<endl;
+                cout <<"Track of song ID "<<tracks->getTrackAddress(j)->getSongID()<< " is added to Recording's album "<<recordings_collection[i]->getTitle()<<endl<<endl;
             
             }
         }
@@ -116,14 +116,14 @@ void Recordings::recordingsToRespectiveTrack(Tracks *tracks, int count){
     
 //    for (int i=0; i<getRecordingCollectionSize(); i++){
 //        
-//        if (i<=getRecordingInstance(i)->getTrackPtrCollectionSize()){
+//        if (i<=getRecordingInstance(i)->getrecordingToTrackCollectionSize()){
 //            cout <<"Album ID: "<<getRecordingInstance(i)->getAlbumID()<<endl;
-//            getRecordingInstance(i)->printTrackPtrCollection(tracks);
+//            getRecordingInstance(i)->printrecordingToTrackCollection(tracks);
 //        }
 //    }
 //    for (int i=0; i<recordings_collection.size(); i++){
 //        cout <<"ID: "<<tracks->getAlbumID(i)<<endl;
-//        getRecordingInstance(i)->printTrackPtrCollection(tracks);
+//        getRecordingInstance(i)->printrecordingToTrackCollection(tracks);
 //    }
     
   

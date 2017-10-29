@@ -22,10 +22,10 @@ public:
     Song(const string &aTitle, const string &aComposer, const int anId);
     ~Song();
     
-    string toString() const;    //printing song
+    string toString() const;
+    void clearPointer(int index);
     
     //printing
-    
     void printOn(ostream & ostr) const;
 
     

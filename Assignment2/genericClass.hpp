@@ -26,12 +26,14 @@ public:
      void readFile(string fileName);
     
     //error related methods
-    static bool errorCheck(string &input);
+    static bool errorCheck(string &input, size_t &log_pos);
     static void printError();
     
     static string toTitleCase(string &str);
     static void moveToEnd(string &str, string value);
     
+    void logCommands(string input, int count);
+    bool logErrorCheck(string input, size_t log_pos);
     
 private:
     static size_t add_pos, delete_pos, help_pos, show_pos, read_pos, command, log_pos, quit;
@@ -49,6 +51,9 @@ private:
     
     int countForTracks=0;
     int count=0;
+    
+    //logging
+    static string log_command, start, stop;
     
        
 };

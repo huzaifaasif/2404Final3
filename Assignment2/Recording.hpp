@@ -28,11 +28,11 @@ public:
     string getTitle();
     int getAlbumID();
     
-    void printTrackPtrCollection(class Tracks *tracks);
+    void printrecordingToTrackCollection(class Tracks *tracks);
     
     //getter
     class Track *getTrackPointer(int index);
-    size_t getTrackPtrCollectionSize();
+    size_t getrecordingToTrackCollectionSize();
     
     
     //setter
@@ -48,7 +48,7 @@ private:
     int year, albumID;
     class Track *ptr_track;
     
-    vector<Track*> trackPtrCollection;
+    vector<Track*> recordingToTrackCollection;
     //Track *ptr;
 };
 

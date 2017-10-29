@@ -38,6 +38,9 @@ size_t Track::getTrackToSongCollectionSize() const{
     return tracksToSongCollection.size();
 }
 
+void Track::clearPointer(int index){
+    tracksToSongCollection.erase(tracksToSongCollection.begin()+index);
+}
 //setters
 
 void Track::setTrackToSongCollection(Song *song){
@@ -50,6 +53,10 @@ void Track::setSongPtr(Song *songPtr){
 
 Song *Track::getSongPointer(){
     return ptr_song;
+}
+
+Song *Track::getTracksToSongCollectionPtr(int index){
+    return tracksToSongCollection[index];
 }
 
 //

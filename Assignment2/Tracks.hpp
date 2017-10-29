@@ -24,7 +24,9 @@ public:
     void setTrackCollection(Recording *recording);
     void getData(string &input);
 
-    class Track *getTrackInstance(int index);
+    class Track *getTrackAddress(int index);
+    class Track getTrackInstance(int index);
+    
     size_t sizeOfTrackCollection();
     
     //getters
@@ -52,4 +54,5 @@ private:
     
 };
 ostream & operator<<(ostream & out, const Tracks & tracks);
+ostream & operator<<(ostream & out, const Track & track);
 #endif /* Tracks_hpp */

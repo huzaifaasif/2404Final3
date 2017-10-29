@@ -77,7 +77,7 @@ void Tracks::getData(string &input){
 }
 
 //getter
-Track *Tracks::getTrackInstance(int index){
+Track *Tracks::getTrackAddress(int index){
     return tracks_collection[index];  //dereference the pointer=track instance
 }
 
@@ -106,11 +106,11 @@ int Tracks::getSongID(int index){
 //                if ( recordings->getRecordingAlbumID(i) == tracks_collection[j]->getAlbumID() ){
 //                    
 //                    
-//                    getTrackInstance(j)->setRecordingPtr(recordings->getRecordingInstance(i));
+//                    getTrackAddress(j)->setRecordingPtr(recordings->getRecordingInstance(i));
 //                    
 //                    
 //                    
-//                    cout <<getTrackInstance(j)->getRecordingPointer()<<endl;
+//                    cout <<getTrackAddress(j)->getRecordingPointer()<<endl;
 //                    
 //                }
 //            }
@@ -125,19 +125,31 @@ void Tracks::removeData(string input, Recordings *recording_ptr){
     
     genericClass::parseIntFromString(input, id);
     
-    for (int i=0; i<recording_ptr->getRecordingCollectionSize();i++){
+    for (int i=0; i<recording_ptr->getRecordingCollectionSize(); i++){
         
         if (ptrDeleted){
             break;
         }
         
-        for (int j=0; j<tracks_collection.size(); j++){
+        //deleting by SONG ID
+        
+        size_t recordingToTrackCollectionSize = recording_ptr->getRecordingInstance(i)->getrecordingToTrackCollectionSize();
+        
+        for (int j=0; j<recordingToTrackCollectionSize; j++){
             
-            if (id == tracks_collection[j]->getSongID()){
+            class Track *trackPtr = recording_ptr->getRecordingInstance(i)->getTrackPointer(j);
+            
+            if (id == trackPtr->getSongID()){
                 
-                cout <<"Deleting Track of ID "<<tracks_collection[i]->getSongID()<<endl;
-                tracks_collection.erase(tracks_collection.begin()+i);
-                recording_ptr->getRecordingInstance(i)->clearPointer(j);
+                Track trck = *tracks_collection[i];
+                cout <<"Deleting Track ";
+                
+                cout <<trck;
+            
+                tracks_collection.erase(tracks_collection.begin()+i); //deleting the track object - pointer may or may not be valid
+                
+                
+                recording_ptr->getRecordingInstance(i)->clearPointer(j);    //clearing R1->T1 to be safe (as an example)
                 ptrDeleted=true;
                 break;
             }
@@ -159,16 +171,21 @@ void Tracks::removeData(string input, Recordings *recording_ptr){
 //    }
 }
 
+Track Tracks::getTrackInstance(int index){
+    return *tracks_collection[index];
+}
+
 void Tracks::tracksToRespectiveSongs(Songs *songs, int count){
     
-    for (int i=count; i<tracks_collection.size(); i++){
+    
+    for (int i=count; i<songs->getSongCollectionSize(); i++){
         
         if (tracks_collection[i]->getSongID() == songs->getSongInstance(i)->getID()){
             
            // tracks_collection[i]->setSongPtr(songs->getSongInstance(i));
             tracks_collection[i]->setTrackToSongCollection(songs->getSongInstance(i));
             
-            cout <<"Song "<<songs->getSongInstance(i)->getTitle()<<" id added to Track "<<tracks_collection[i]->getSongID()<<endl;
+            cout <<"Song "<<songs->getSongInstance(i)->getTitle()<<" id added to Track "<<tracks_collection[i]->getSongID()<<endl<<endl;
             
         }
     }
@@ -211,3 +228,10 @@ ostream & operator<<(ostream & out, const Tracks & tracks){
     
     return out;
 }
+
+ostream & operator<<(ostream & out, const Track & track){
+    out <<track.toString()<<endl<<endl;
+    
+    return out;
+}
+

@@ -20,19 +20,19 @@ Recording::Recording(int albumID, string title, string artist, string producer, 
 
 Recording::~Recording(){
     
-    for (auto *ptr: trackPtrCollection){
+    for (auto *ptr: recordingToTrackCollection){
         delete ptr;
     }
     
-    trackPtrCollection.clear();
+    recordingToTrackCollection.clear();
 
 }
 
-void Recording::printTrackPtrCollection(Tracks *tracks){
+void Recording::printrecordingToTrackCollection(Tracks *tracks){
     
-    for (int i=0; i<trackPtrCollection.size(); i++){
+    for (int i=0; i<recordingToTrackCollection.size(); i++){
         
-        cout <<"Track address: "<<trackPtrCollection[i]<<endl;
+        cout <<"Track address: "<<recordingToTrackCollection[i]<<endl;
     }
     cout <<endl;
 }
@@ -47,22 +47,22 @@ string Recording::getTitle(){
 }
 
 void Recording::clearPointer(int index){
-    trackPtrCollection.erase(trackPtrCollection.begin()+index);
+    recordingToTrackCollection.erase(recordingToTrackCollection.begin()+index);
 }
 
 void Recording::addTrackPtr(Track *track){
     //ptr_track = track;
     
-    trackPtrCollection.push_back(track);
-    cout << "Track pointer collection vector: "<<trackPtrCollection.size()<<endl;
+    recordingToTrackCollection.push_back(track);
+    cout << "Track pointer collection vector: "<<recordingToTrackCollection.size()<<endl;
 }
 
 Track *Recording::getTrackPointer(int index){
-    return trackPtrCollection[index];
+    return recordingToTrackCollection[index];
 }
 
-size_t Recording::getTrackPtrCollectionSize(){
-    return trackPtrCollection.size();
+size_t Recording::getrecordingToTrackCollectionSize(){
+    return recordingToTrackCollection.size();
 }
 
 string Recording::toString() const{

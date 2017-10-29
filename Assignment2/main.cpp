@@ -18,6 +18,7 @@ using namespace std;
 int main() {
     
     string input;
+    int logCount=0;
     //--> add -s "Ross" "Jim" 101
     
     //inside add method
@@ -26,6 +27,7 @@ int main() {
 
     string helpFile = "helpfile.txt";
     string scriptFile = "scriptfile.txt";
+    size_t log_pos;
     
     for (;;){
         
@@ -34,7 +36,7 @@ int main() {
        
         //if unrecognizable commands are entered, print error
         
-        if(!genericClass::errorCheck(input)){
+        if(!genericClass::errorCheck(input, log_pos)){
             genericClass::printError();
             
         }
@@ -51,6 +53,12 @@ int main() {
             else if (input == ".read"){
                 general_instance.readFile(scriptFile);
             }
+            else if (log_pos!=string::npos){
+                
+                general_instance.logCommands(input, logCount);
+                logCount++;
+            }
+            
            
             //performing any operation
             else{

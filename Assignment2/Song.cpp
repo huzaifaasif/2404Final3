@@ -24,6 +24,9 @@ Song::~Song(){
     
 }
 
+void Song::clearPointer(int index){
+    
+}
 
 string Song::toString()const {
     return to_string(id) + " " + title + " " + composer;
