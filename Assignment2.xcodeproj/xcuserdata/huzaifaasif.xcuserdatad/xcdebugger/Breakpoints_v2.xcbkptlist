@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/main.cpp"
-            timestampString = "530940942.83952"
+            timestampString = "531019717.419588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/main.cpp"
-            timestampString = "530940942.83952"
+            timestampString = "531019717.419588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -70,11 +70,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/main.cpp"
-            timestampString = "530940942.83952"
+            timestampString = "531019717.419588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -86,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/main.cpp"
-            timestampString = "530940942.83952"
+            timestampString = "531019717.419588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -102,11 +102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531014213.348277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "genericClass::errorCheck(string &amp;input, size_t &amp;log_pos)"
             landmarkType = "7">
          </BreakpointContent>
@@ -139,7 +139,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -155,7 +155,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -294,11 +294,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531014213.348277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "genericClass::readFile(string fileName)"
             landmarkType = "7">
          </BreakpointContent>
@@ -331,7 +331,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
             endingLineNumber = "78"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -342,7 +342,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -358,7 +358,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -374,11 +374,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "530649818.278001"
+            timestampString = "531011317.387732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "Recordings::getData(string &amp;input, Tracks &amp;tracks)"
             landmarkType = "7">
          </BreakpointContent>
@@ -390,11 +390,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "530650069.337999"
+            timestampString = "531011317.387732"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "Recordings::getData(string &amp;input, Tracks &amp;tracks)"
             landmarkType = "7">
          </BreakpointContent>
@@ -422,7 +422,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -438,7 +438,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -454,7 +454,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -470,7 +470,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
@@ -486,7 +486,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -502,7 +502,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
@@ -518,7 +518,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -550,7 +550,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
@@ -596,7 +596,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -649,7 +649,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -708,12 +708,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -736,7 +736,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Tracks.cpp"
@@ -756,7 +756,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
@@ -772,12 +772,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -793,7 +793,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -804,7 +804,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -820,11 +820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Tracks.cpp"
-            timestampString = "530987805.520372"
+            timestampString = "531019881.642437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "Tracks::tracksToRespectiveSongs(Songs *songs, int count)"
             landmarkType = "7">
          </BreakpointContent>
@@ -836,12 +836,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -868,12 +868,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -884,11 +884,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531014213.348277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
             landmarkName = "genericClass::toTitleCase(string &amp;str)"
             landmarkType = "7">
          </BreakpointContent>
@@ -900,11 +900,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531014213.348277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
             landmarkName = "genericClass::toTitleCase(string &amp;str)"
             landmarkType = "7">
          </BreakpointContent>
@@ -916,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005063.294594"
+            timestampString = "531019419.585204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "Songs::showSongCollection(Songs *songs)"
             landmarkType = "7">
          </BreakpointContent>
@@ -932,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005063.294594"
+            timestampString = "531019419.585204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "operator&lt;&lt;(ostream &amp; out, const Songs &amp; Songs)"
             landmarkType = "9">
          </BreakpointContent>
@@ -948,11 +948,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Tracks.cpp"
-            timestampString = "530989424.119154"
+            timestampString = "531019881.642437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "Tracks::showTracksCollection(Tracks *tracks)"
             landmarkType = "7">
          </BreakpointContent>
@@ -969,7 +969,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -980,11 +980,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Tracks.cpp"
-            timestampString = "530989424.119154"
+            timestampString = "531019881.642437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "Tracks::showTracksCollection(Tracks *tracks)"
             landmarkType = "7">
          </BreakpointContent>
@@ -996,7 +996,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Recordings.cpp"
-            timestampString = "531005675.218448"
+            timestampString = "531015907.577159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "196"
@@ -1012,11 +1012,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531014213.348277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
             landmarkName = "genericClass::toTitleCase(string &amp;str)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1028,12 +1028,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1065,14 +1065,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
@@ -1081,7 +1081,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1097,7 +1097,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1124,11 +1124,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
             landmarkName = "genericClass::logCommands(string input, int count)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1140,11 +1140,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003850.609579"
+            timestampString = "531009927.168588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "genericClass::logCommands(string input, int count)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1156,11 +1156,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005063.294594"
+            timestampString = "531019419.585204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1172,43 +1172,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005063.294594"
+            timestampString = "531019419.585204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Songs.cpp"
+            timestampString = "531019419.585204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Songs.cpp"
+            timestampString = "531019419.585204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
             endingLineNumber = "182"
-            landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005063.294594"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005063.294594"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
             landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1241,7 +1241,55 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "130"
             endingLineNumber = "130"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/genericClass.cpp"
+            timestampString = "531003837.821286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Songs.cpp"
+            timestampString = "531005056.256829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "Songs::getData(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/genericClass.cpp"
+            timestampString = "531013613.119449"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1252,12 +1300,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Assignment2/genericClass.cpp"
-            timestampString = "531003837.821286"
+            timestampString = "531013744.452019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "genericClass::performOperation(string &amp;lowercaseInput)"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Playlist.cpp"
+            timestampString = "531017970.669319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "Playlist::getData(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1267,13 +1331,188 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Assignment2/Songs.cpp"
-            timestampString = "531005056.256829"
+            filePath = "Assignment2/genericClass.cpp"
+            timestampString = "531015742.056713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "Songs::getData(string &amp;input)"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Playlist.cpp"
+            timestampString = "531025643.02865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "Playlist::addTrackPointer(Track *track)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Playlist.cpp"
+            timestampString = "531017970.669319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "Playlist::getData(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Playlist.cpp"
+            timestampString = "531025643.02865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "Playlist::getData(string &amp;input)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Playlist::getData(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
+                  moduleName = "Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huzaifaasif/Downloads/FinalAssignment2/Assignment2/Assignment2/Playlist.cpp"
+                  timestampString = "531025643.44631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "5364">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Playlist::getData(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
+                  moduleName = "Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huzaifaasif/Downloads/FinalAssignment2/Assignment2/Assignment2/Playlist.cpp"
+                  timestampString = "531025643.450006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "8128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Playlist::getData(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
+                  moduleName = "Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huzaifaasif/Downloads/FinalAssignment2/Assignment2/Assignment2/Playlist.cpp"
+                  timestampString = "531025643.45428"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "9748">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Songs.cpp"
+            timestampString = "531018805.244022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "Songs::removeData(string input, Tracks *track_ptr)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/genericClass.cpp"
+            timestampString = "531018828.963167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "genericClass::performOperation(string &amp;input)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Tracks.cpp"
+            timestampString = "531019877.176829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "Tracks::removeData(string input, Recordings *recording_ptr)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Playlist.cpp"
+            timestampString = "531026202.797384"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "Playlist::printOnForplaylistTracks(Playlist &amp;aPlaylist)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment2/Playlist.cpp"
+            timestampString = "531025582.627274"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "Playlist::getData(string &amp;input)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

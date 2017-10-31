@@ -130,16 +130,7 @@ void genericClass::performOperation(string &input){
             tracks.tracksToRespectiveSongs(song_ptr, count);
             count++;
             
-           
-            
-            //****** to BE REMOVED*******
-//            if (count<=tracks_ptr->sizeOfTrackCollection() && !songs.isEmpty()) {
-//                //remove from song
-//                tracks.tracksToRespectiveSongs(song_ptr, count);
-           // }
-            
-            
-            
+        
     //        for (int i=0; i<recordings.getRecordingCollectionSize(); i++){
     //            
     //            if (i<=recordings.getRecordingInstance(i)->getrecordingToTrackCollectionSize()){
@@ -149,7 +140,33 @@ void genericClass::performOperation(string &input){
     //        }
             
         }
+        
+        else if (keyword == "u"){
+            
+            users.getData(input);
+            
+        }
+        else if(keyword == "p"){
+            
+            
+            playlist.getData(input);
+            playlist_ptr = &users;
+            playlist.usersToRespectivePlaylist(playlist_ptr,countForPlaylist);
+            countForPlaylist++;
+            
+            
+        }
+        else if(keyword == "l"){
+            
+            playlist.getData(input);
+            tracks_ptr = &tracks;
+            playlist.playlistToRespectiveTrack(tracks_ptr, countForPlaylistToTrack);
+            countForPlaylistToTrack++;
+            
+        }
+        
     }
+    
     //---deleting----
     
     else if (operation == "delete"){
@@ -182,6 +199,18 @@ void genericClass::performOperation(string &input){
             cout <<"Need to populate the collection prior to deleting!"<<"\n\n";
         }
         
+        else if (keyword == "u"){
+            users.removeData(input);
+        }
+        
+        else if (keyword == "p"){
+            playlist.removeData(input);
+        }
+        
+        else if (keyword == "l"){
+            playlist.removeData(input);
+        }
+        
     }
     //show command
     
@@ -200,6 +229,17 @@ void genericClass::performOperation(string &input){
         else if (keyword == "r"){
             recording_ptr=&recordings;
             recordings.showRecordingCollection(recording_ptr);
+        }
+        
+        else if(keyword == "u"){        //user collection
+            playlist_ptr = &users;
+            users.showUserCollection(playlist_ptr);
+        }
+        
+        else if(keyword == "c"){        //user's playlist collection
+            playlistPointer = &playlist;
+            users.showUsersPlaylistCollection(playlistPointer);
+            //countForShowUserPlaylist++;
         }
     }
     
@@ -255,6 +295,8 @@ void genericClass::logCommands(string input, int count){
             }
             
             file_out<<log_file_input<<endl;
+            performOperation(log_file_input);
+            cout <<endl;
         }
         count++;
         log_file="";
@@ -343,7 +385,7 @@ string genericClass::toTitleCase(string &str){
     
     pos = s.find("The ");
     
-    if (pos!=string::npos){     //if "The" is found in the string, move it to the end
+    if (pos==0){     //if "The" is found in the string, move it to the end
         moveToEnd(s, "The ");
         str = s;
     }

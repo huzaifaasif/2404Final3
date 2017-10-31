@@ -92,7 +92,7 @@ void Songs::getData(string &input){
     collection.push_back(song);
     
     cout <<"Adding ";
-     cout<<*this<<endl;
+    cout<<*this<<endl;
     
 }
 
@@ -178,16 +178,19 @@ void Songs::removeData(string input, Tracks *track_ptr){
         
         if (id == collection[i]->getID()){
             
-            cout <<"Deleting "<<collection[i]->getTitle()<<endl;
-            
             Track *trackPtr =track_ptr->getTrackAddress(i);
             collection.erase(collection.begin()+i);
             
+            cout <<"Track to Song collection is "<<trackPtr->getTrackToSongCollectionSize()<<endl;
+           
+            cout <<"Deleting song "<<collection[i]->getTitle()<<endl;
             trackPtr->clearPointer(i);
             
             //track_ptr->gett.clearPointer(i);
             
-            cout <<"Song collection size is "<<getSongCollectionSize()<<endl<<endl;
+            cout <<"Song collection size now is "<<getSongCollectionSize()<<endl<<endl;
+            
+            cout <<"Track to song collection size now becomes "<<trackPtr->getTrackToSongCollectionSize()<<endl<<endl;
             return;
         }
     }

@@ -53,7 +53,7 @@ int main() {
             else if (input == ".read"){
                 general_instance.readFile(scriptFile);
             }
-            else if (log_pos!=string::npos){
+            else if (log_pos!=string::npos){    //logging
                 
                 general_instance.logCommands(input, logCount);
                 logCount++;
@@ -66,9 +66,6 @@ int main() {
                 general_instance.performOperation(input);
             }
         
-            
-            
-            
             
 //            Song *song = new Song("Ross", "Jim", 101);
 //            

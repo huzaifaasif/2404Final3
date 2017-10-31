@@ -43,6 +43,10 @@ int Track::getSongID(){
     return songID;
 }
 
+int Track::getTrackID(){
+    return track_id;
+}
+
 size_t Track::getTrackToSongCollectionSize() const{
     return tracksToSongCollection.size();
 }

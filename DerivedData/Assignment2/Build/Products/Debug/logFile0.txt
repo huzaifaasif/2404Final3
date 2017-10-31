@@ -1,2 +1,2 @@
 haha
-alwl
+add -s "haha" "lol" 101

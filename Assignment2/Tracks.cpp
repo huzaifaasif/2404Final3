@@ -143,6 +143,9 @@ void Tracks::removeData(string input, Recordings *recording_ptr){
             if (id == trackPtr->getSongID()){
                 
                 Track trck = *tracks_collection[i];
+                
+                cout <<"Recording to Tracks collection size is "<<recording_ptr->getRecordingInstance(i)->getrecordingToTrackCollectionSize()<<endl;
+                
                 cout <<"Deleting Track ";
                 
                 cout <<trck;
@@ -151,6 +154,9 @@ void Tracks::removeData(string input, Recordings *recording_ptr){
                 
                 
                 recording_ptr->getRecordingInstance(i)->clearPointer(j);    //clearing R1->T1 to be safe (as an example)
+                
+                cout <<"Recording to Tracks collection size now becomes "<<recording_ptr->getRecordingInstance(i)->getrecordingToTrackCollectionSize()<<endl<<endl;
+                
                 ptrDeleted=true;
                 break;
             }
@@ -186,7 +192,7 @@ void Tracks::tracksToRespectiveSongs(Songs *songs, int count){
            // tracks_collection[i]->setSongPtr(songs->getSongInstance(i));
             tracks_collection[i]->setTrackToSongCollection(songs->getSongInstance(i));
             
-            cout <<"Song "<<songs->getSongInstance(i)->getTitle()<<" id added to Track "<<tracks_collection[i]->getSongID()<<endl<<endl;
+            cout <<"Song "<<songs->getSongInstance(i)->getTitle()<<" is added to Track with track ID "<<tracks_collection[i]->getTrackID()<<endl<<endl;
            // break;
             
         }
@@ -199,6 +205,10 @@ bool Tracks::isEmpty() const{
 }
 size_t Tracks::getTrackCollectionSize(){
     return tracks_collection.size();
+}
+
+int Tracks::getTrackID(int index){
+    return tracks_collection[index]->getTrackID();
 }
 
 void Tracks::showTracksCollection(Tracks *tracks) const{

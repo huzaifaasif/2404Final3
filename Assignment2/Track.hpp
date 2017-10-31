@@ -33,6 +33,7 @@ public:
     int getSongID();
     class Recording *getRecordingPointer();
     class Song *getSongPointer();
+    int getTrackID();
     Song *getTracksToSongCollectionPtr(int index);
     
   
@@ -42,6 +43,7 @@ public:
     void setSongPtr(class Song *songPtr);
     void setTrackToSongCollection(Song *song);
     size_t getTrackToSongCollectionSize() const;
+
     
 private:
     int track_id, albumID, songID, track_number;

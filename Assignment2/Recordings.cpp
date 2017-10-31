@@ -14,8 +14,6 @@
 using namespace std;
 
 
-
-
 Recordings::Recordings(){
 
 }
@@ -78,6 +76,8 @@ void Recordings::getData(string &input, Tracks &tracks){
     string producer = input.substr(producer_start_pos, diff_producer);
     
     genericClass::toTitleCase(title);
+    genericClass::toTitleCase(artist);
+    genericClass::toTitleCase(producer);
     
     Recording *recording = new Recording(albumID, title, artist, producer, year);
     

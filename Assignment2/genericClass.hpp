@@ -15,6 +15,9 @@
 #include "Recordings.hpp"
 #include "Track.hpp"
 #include "Tracks.hpp"
+#include "Users.hpp"
+#include "Playlist.hpp"
+
 using namespace std;
 
 class genericClass{
@@ -46,11 +49,23 @@ private:
     Tracks * tracks_ptr;
     Songs * song_ptr;
 
+    Users users;
+    
     Track track;
     Tracks tracks;
     
+    Playlist playlist;
+    
+    Users * playlist_ptr;
+    Playlist * playlistPointer;
+    
+    
+    
     int countForTracks=0;
     int count=0;
+    
+    int countForPlaylist=0;
+    int countForPlaylistToTrack=0;
     
     //logging
     static string log_command, start, stop;

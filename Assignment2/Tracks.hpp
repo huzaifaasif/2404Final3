@@ -32,6 +32,7 @@ public:
     //getters
     int getAlbumID(int index);
     int getSongID(int index);
+    int getTrackID(int index);
     size_t getTrackCollectionSize();
     
     bool isEmpty() const;
